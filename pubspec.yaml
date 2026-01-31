@@ -17,6 +17,6 @@ dev_dependencies:
   icon_font_generator: ^4.1.0
 flutter:
   fonts:
-    - family: EstrellasIcons
+    - family: icon_font_generator Icons
       fonts:
         - asset: lib/font/croatiapp_font.otf

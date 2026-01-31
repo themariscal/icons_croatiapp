@@ -1,0 +1,22 @@
+name: icons_font
+version: 1.0.0
+description: A new Flutter package project.
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  change_case: ^2.1.0
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  icon_font_generator: ^4.0.0
+flutter:
+  fonts:
+    - family: EstrellasIcons
+      fonts:
+        - asset: lib/font/estrellas_font.otf

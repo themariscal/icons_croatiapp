@@ -22,6 +22,6 @@ This tool use the package: [Icon Font Generator](https://pub.dev/packages/icon_f
 2. Ensure that the `assets/icons/` path contain all the `*.svg` that you want convert to the font.
 3. Run this command:
    ```
-   dart pub global run icon_font_generator --from=assets/icons --class-name=TriiIcons --out-font=lib/font/trii_font.ttf --out-flutter=lib/icons_font.dart
+   dart pub global run icon_font_generator --from=assets/icons --class-name=CroatiappIcons --out-font=lib/font/croatiapp_font.ttf --out-flutter=lib/icons_font.dart
    ```
 4. Enjoy

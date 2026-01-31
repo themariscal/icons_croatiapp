@@ -1,22 +1,22 @@
 name: icons_font
 version: 1.0.0
-description: A new Flutter package project.
+description: Icons for Croatiapp
 publish_to: none
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: ^3.10.4
 
 dependencies:
-  change_case: ^2.1.0
+  change_case: ^2.2.0
   flutter:
     sdk: flutter
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  icon_font_generator: ^4.0.0
+  icon_font_generator: ^4.1.0
 flutter:
   fonts:
     - family: EstrellasIcons
       fonts:
-        - asset: lib/font/estrellas_font.otf
+        - asset: lib/font/croatiapp_font.otf

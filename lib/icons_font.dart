@@ -21,7 +21,7 @@ import 'package:flutter/widgets.dart';
 ///   fonts:
 ///     - family: EstrellasIcons
 ///       fonts:
-///         - asset: fonts/./lib/font/estrellas_font.otf
+///         - asset: fonts/./lib/font/croatiapp_font.otf
 /// ```
 class EstrellasIcons {
   const EstrellasIcons._();

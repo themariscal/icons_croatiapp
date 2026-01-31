@@ -26,4 +26,4 @@ flutter:
   fonts:
     - family: EstrellasIcons
       fonts:
-        - asset: assets/fonts/icons/estrellas_font.otf
+        - asset: assets/fonts/icons/croatiapp_font.otf

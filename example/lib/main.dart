@@ -18,20 +18,60 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => Scaffold(
-        body: SafeArea(
-          child: ListView.builder(
-            padding: EdgeInsets.only(left: 50),
-            itemCount: iconsMap.length,
-            itemBuilder: (BuildContext context, int index) => ListTile(
-              leading: Icon(
-                iconsMap.values.elementAt(index),
-                size: 50,
-                color: Colors.blue,
+  Widget build(BuildContext context) {
+    final entries = iconsMap.entries.toList()
+      ..sort((a, b) => a.key.compareTo(b.key));
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Icons (${entries.length})'),
+      ),
+      body: SafeArea(
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            final crossAxisCount = constraints.maxWidth > 900
+                ? 6
+                : constraints.maxWidth > 600
+                    ? 4
+                    : 3;
+
+            return GridView.builder(
+              padding: const EdgeInsets.all(16),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: crossAxisCount,
+                mainAxisSpacing: 12,
+                crossAxisSpacing: 12,
+                childAspectRatio: 1,
               ),
-              title: Text(iconsMap.keys.elementAt(index)),
-            ),
-          ),
+              itemCount: entries.length,
+              itemBuilder: (BuildContext context, int index) {
+                final entry = entries[index];
+                return Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black12),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  padding: const EdgeInsets.all(12),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(entry.value, size: 36, color: Colors.blue),
+                      const SizedBox(height: 8),
+                      Text(
+                        entry.key,
+                        textAlign: TextAlign.center,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(fontSize: 11),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            );
+          },
         ),
-      );
+      ),
+    );
+  }
 }

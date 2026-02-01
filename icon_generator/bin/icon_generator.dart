@@ -37,9 +37,9 @@ String getMapIcons(Map<String, String> svgMap) {
 
 void main() {
   String basePath = './lib';
-  String packageFontPath = '$basePath/font/estrellas_font.otf';
+  String packageFontPath = '$basePath/font/croatiapp_font.otf';
   String packageFilePath = '$basePath/icons_font.dart';
-  String exampleFontPath = './example/assets/fonts/icons/estrellas_font.otf';
+  String exampleFontPath = './example/assets/fonts/icons/croatiapp_font.otf';
 
   Map<String, String> svgMap = readFiles();
 

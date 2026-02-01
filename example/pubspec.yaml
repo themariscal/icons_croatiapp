@@ -1,5 +1,5 @@
-name: example
-description: A new Flutter project.
+name: croatiapp_icons
+description: Icons for Croatiapp
 
 publish_to: "none"
 
@@ -23,7 +23,3 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  fonts:
-    - family: EstrellasIcons
-      fonts:
-        - asset: assets/fonts/icons/croatiapp_font.otf
